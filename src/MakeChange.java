@@ -10,34 +10,28 @@ public class MakeChange {
 		double changeDisplay;
 
 		// The user is prompted asking for the price of the item.
+		
 		System.out.print("What is the price of the item? \t  ");
 		price = (int) Math.round(sc.nextDouble() * 100);
 
 		// The user is then prompted asking how much money was
 		// tendered by the customer.
+		
 		System.out.print("Insert cash tendered: \t  ");
-		// cashTendered = sc.nextInt();
 		cashTendered = (int) Math.round(sc.nextDouble() * 100);
 
 		// Display an appropriate message if the customer provided
 		// too little money or the exact amount.
 
-		// System.out.println("Please provide enough to cover " + "your $" + difference
-		// + " difference");
-		// }
-
 		if (cashTendered > price) {
 			change = cashTendered - price;
 			changeDisplay = (double) change;
 			System.out.println("Here comes your change of $" + changeDisplay / 100 + " as follows");
-			// System.out.println("The change is: " + ((cashTendered - price)/100.00));
-			// System.out.println("The customer should be given the change as follows:");
 
-			// change = (int)(Math.ceil(change*100));
-			// int dollars = change/100;
-			// change=change%100;
-			// System.out.println("Dollars: " + dollars);
-
+			
+//			If the amount tendered is more than the cost of the item, display the number of bills 
+//			and coins that should be given to the customer.
+			
 			int twenties = change / 2000;
 			if (twenties > 0) {
 				change = change % 2000;
@@ -90,26 +84,3 @@ public class MakeChange {
 
 	}
 }
-
-// If the amount tendered is more than the cost of the item,
-// display the number of bills and coins that should be given
-// to the customer.
-
-// int changeDue = 0;
-//
-// int change = (int)(Math.ceil(changeDue*100));
-// int dollars = Math.round((int)change/100);
-// change=change%100;
-// int quarters = Math.round((int)change/25);
-// change=change%25;
-// int dimes = Math.round((int)change/10);
-// change=change%10;
-// int nickels = Math.round((int)change/5);
-// change=change%5;
-// int pennies = Math.round((int)change/1);
-//
-// System.out.println("Dollars: " + dollars);
-// System.out.println("Quarters: " + quarters);
-// System.out.println("Dimes: " + dimes);
-// System.out.println("Nickels: " + nickels);
-// System.out.println("Pennies: " + pennies);

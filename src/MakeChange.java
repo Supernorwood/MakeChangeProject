@@ -11,13 +11,13 @@ public class MakeChange {
 
 		// The user is prompted asking for the price of the item.
 		
-		System.out.print("What is the price of the item? \t  ");
+		System.out.print("What is the price of the item? \n-->>  ");
 		price = (int) Math.round(sc.nextDouble() * 100);
 
 		// The user is then prompted asking how much money was
 		// tendered by the customer.
 		
-		System.out.print("Insert cash tendered: \t  ");
+		System.out.print("Insert cash tendered: \n-->>  ");
 		cashTendered = (int) Math.round(sc.nextDouble() * 100);
 
 		// Display an appropriate message if the customer provided
@@ -65,12 +65,12 @@ public class MakeChange {
 			}
 			int nickels = change / 5;
 			if (nickels > 0) {
-				change = change % 10;
+				change = change % 5;
 				System.out.println(nickels + " nickel(s)");
 			}
 			int pennies = change / 1;
 			if (pennies > 0) {
-				change = change % 10;
+				change = change % 1;
 				System.out.println(pennies + " penny(s)");
 			}
 
